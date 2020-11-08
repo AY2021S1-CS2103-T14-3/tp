@@ -7,7 +7,7 @@ title: User Guide
 ## Introduction
 
 WanderLust helps tech-savvy travellers to plan their trips in a structured and efficient manner by providing them with a holistic travel planner.
-It is optimized for CLI users so that activites and details can be added faster by typing in commands.
+It is optimized for CLI users so that destinations and details can be added faster by typing in commands.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -89,18 +89,17 @@ It is optimized for CLI users so that activites and details can be added faster 
 
 ## Tutorial Guide
 
-Here are the steps you can follow to get familiar with _Wanderlust_. Note that this tutorial serves as a simple guide to
-get you started on _Wanderlust_. It does not contain all the commands that _Wanderlust_ entails.
+Here are the steps you can follow to get familiar with _Wanderlust_
 
 Command | Description
 ------------ | -------------
 `clear` | Remove all preset data from Wanderlust
-`add -travelplan n/Singapore sd/2021-05-05 ed/2021-06-06` | Adds a Singapore travel plan to the travel plan list 
-`goto -travelplan 1` | Go to the Singapore travel plan
+`add -travelplan n/Singapore sd/2021-05-05 ed/2021-06-06` | Adds a Singapore travelPlan to the travelPlan list 
+`goto -travelplan 1` | Go to the Singapore travelplan
 `add -friend n/Tom p/E1234567K m/84329182` | Add a friend name `Tom` with passport number `E1234567K` and mobile number `84329182`
-`add -accommodation n/Lloyd's Inn l/Singapore c/200 sd/2021-01-01 ed/2021-01-02` | Add an accommodation name `Lloyd's Inn` with location at `Singapore` and a cost of `200`, and the start date of `2021-01-01` and end date of `2021-01-02`
+`add -friend n/Jerry p/E4538201A m/89201987` | Add a friend name `Jerry` with passport number `E4538201A` and mobile number `89201987`
 `find -friend tom` | Finds all friend with name tom
-`delete -friend 1` | Removes friend at index 1 in the friend list shown
+`delete -friend 1` | Removes friend at index 1 in the friendlist shown
 `show -activity` | Switch to the activity tab
  
 
@@ -112,10 +111,10 @@ The table briefly describes the commands and its usage. Full details will be giv
 
 Command | Parameters | Description
 ------------ | ------------- | -------------
-`add -OBJECT` | `OBJECT` activity/ accommodation/ friend/ travelplan | Creates the given object type
-`delete -OBJECT INDEX` | `OBJECT` activity/ accommodation/ friend/ travelplan <br> `INDEX` Specific number of the indexed list object | Deletes the given object type
-`edit -OBJECT INDEX` | `OBJECT` activity/ accommodation/ friend/ travelplan <br> `INDEX` Specific number of the indexed list object| Edits the details of the given object type
-`goto -DIRECTORY` | `DIRECTORY` wishlist/ travelplan with `INDEX` | Navigate to the specific travel plan/ wishlist
+`add -OBJECT` | `OBJECT` activity/ accommodation/ friend/ travelPlan | Creates the given object type
+`delete -OBJECT INDEX` | `OBJECT` activity/ accommodation/ friend/ travelPlan <br> `INDEX` Specific number of the indexed list object | Deletes the given object type
+`edit -OBJECT INDEX` | `OBJECT` activity/ accommodation/ friend/ travelPlan <br> `INDEX` Specific number of the indexed list object| Edits the details of the given object type
+`goto -DIRECTORY` | `DIRECTORY` wishlist/ travelPlan with `INDEX` | Navigate to the specific travel plan/ wishlist
 `find -OBJECT KEYWORD` | `OBJECT` activity/ accommodation/ friend <br/>`KEYWORD` keywords to search for  | Finds the given object type whose names contain any of the given keywords
 `show -OBJECT` | `OBJECT` activity/ accommodation/ friend | Navigate to the specific travel plan object tab
 `sort -OBJECT TYPE` |`OBJECT` activity/ accommodation/ friend <br/>`TYPE` cost/ name/ importance/ date/ passport/ mobile | Sorts the specific travel plan object with respect to the given type
@@ -127,10 +126,10 @@ Command | Parameters | Description
 
 ## Directory
 
-There are two directories within Wanderlust. They are `wishlist` and `traveplan`. You will always be at the Wishlist directory when you open the app.<br/>
+There are two directories within Wanderlust. They are WishList and TravelPlan. You will always be at the Wishlist directory when you open the app.<br/>
 The table compares a list of commands available at each directory.
 
-Wishlist | Travel plan
+Wishlist | TravelPlan
 -------------  | -------------
 `goto -DIRECTORY`|`goto -DIRECTORY`
 `show -activity`| `show -OBJECT`
@@ -141,9 +140,6 @@ Wishlist | Travel plan
 `edit -activity` | `edit -OBJECT`
 `move ACTIVITY_INDEX TRAVELPLAN INDEX`  | Not Applicable
 `copy ACTIVITY_INDEX TRAVELPLAN INDEX` | Not Applicable
-`clear` | `clear`
-`help` | `help`
-`exit` | `exit`
 
 --------------------------------------------------------------------------------------------------------------------
 ## Parameters
@@ -164,11 +160,7 @@ Name of Parameter | Description | Format
 
 **Notes about Activity:**<br>
 
-* Different activities can have the same date and time within _Wanderlust_ travel plan and wishlist.
-* Two activities are considered the same if they have the same name, location and date and time.
-* The name of an activity is case sensitive.
-* If an activity is in a travel plan, the activity date and time must be within the start and date end of the travel plan.
-* The date and time of an activity is not restricted. (Etc a user can input an insignificant date time such as `1111-11-11 00:00`).
+* Different Activity can have the same datetime within _Wanderlust_ travelPlan and wishlist.
 
 #### Accommodation Parameters
 
@@ -183,9 +175,7 @@ Name of Parameter | Description | Format
 
 **Notes about Accommodation:**<br>
 
-* Different accommodation can have start date and end date overlap within _Wanderlust_ travel plan.
-* If an accommodation is in a travel plan, the accommodation date must be within the start and date end of the travel plan.
-* The date of an accommodation is not restricted. (Etc a user can input an insignificant date time such as `1111-11-11`).
+* Different Accommodation can have start date and end date overlap within _Wanderlust_ travelPlan.
 
 #### Friend Parameters
 
@@ -229,9 +219,7 @@ Name of Parameters | Description | Format
 
 * Global commands can be used anywhere within Wanderlust.
 
-* Local commands can only be used within the wishlist or specified travel plan.
-
-* Words in square brackets `[]` are optional.
+* Local commands can only be used within the wishlist or specified travelplan.
 <br/>
 </div>
 
@@ -292,7 +280,7 @@ Example: `add -travelplan n/France sd/2021-09-15 ed/2021-09-30`
 ### 2. Adding an Activity (L)
 Creates a new activity and adds it to the travel plan/wishlist in the current directory.
 Format of date is in YYYY-MM-DD and format of time is HH:MM (24h clock).<br/>
-Activities can have the same datetime within the travel plan or wishlist in _Wanderlust_.
+Activities can have the same datetime within the travelPlan or wishlist in _Wanderlust_.
 
 Format: `add -activity n/NAME i/LEVEL_OF_IMPORTANCE l/LOCATION c/COST d/YYYY-MM-DD HH:mm`
 
@@ -587,7 +575,7 @@ Format: `exit`
 
 ## FAQ
 
-Q: How do I remove existing data when I start the app and start with a blank travel planner?
+Q: How do I remove existing data when I start the app and start with a blank travelPlanner?
 
 A: Type `clear` in the command to remove all preexisting data.
 

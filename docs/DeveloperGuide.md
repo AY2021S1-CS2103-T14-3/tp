@@ -847,10 +847,10 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     Use case ends.
 
-    **Extensions**
-    
-    * 2a. The input command format is invalid.
-        * 2a1. Wanderlust shows an error message.
+**Extensions**
+
+* 2a. The input command format is invalid.
+    * 2a1. Wanderlust shows an error message.
 
       Use case ends.
 
@@ -863,186 +863,12 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     Use case ends.
 
-**Use case: UC19 - Sort activity list in travel plan**
+*{More to be added}*
 
-**MSS**
-
-1. User <ins>navigates to a specific travel plan (UC1).</ins>
-2. User requests to sort activity list by cost.
-3. Wanderlust returns sorted list of activities by decreasing cost.
-
-    Use case ends.
-    
-**Extensions**
-
-* 2a. The input command format is invalid.
-    * 2a1. Wanderlust shows an error message.
-    
-    Use case ends.
-
-**Use case: UC20 - Sort accommodation list in travel plan**
-
-**MSS**
-
-1. User <ins>navigates to a specific travel plan (UC1).</ins>
-2. User requests to sort accommodation list by date.
-3. Wanderlust returns sorted list of accommodation by date in chronological order.
-
-    Use case ends.
-    
-**Extensions**
-
-* 2a. The input command format is invalid.
-    * 2a1. Wanderlust shows an error message.
-    
-* 2b. User is still in wishlist.
-    *2b1. Wanderlust shows an error message.
-    
-    Use case ends.
-
-**Use case: UC21 - Sort friend list in travel plan**
-
-**MSS**
-
-1. User <ins>navigates to a specific travel plan (UC1).</ins>
-2. User requests to sort friend list by name.
-3. Wanderlust returns sorted list of name in alphabetical order.
-
-    Use case ends.
-    
-**Extensions**
-
-* 2a. The input command format is invalid.
-    * 2a1. Wanderlust shows an error message.
-    
-* 2b. User is still in wishlist.
-    *2b1. Wanderlust shows an error message.
-    
-    Use case ends.
-    
-**Use case: UC22 - Find activity in travel plan**
-
-**MSS**
-
-1. User <ins>navigates to a specific travel plan (UC1).</ins>
-2. User requests to find activities according to keyword.
-3. Wanderlust returns a filtered list of activities that contain the keyword.
-
-    Use case ends.
-    
-**Extensions**
-
-* 2a. The input command format is invalid.
-    * 2a1. Wanderlust shows an error message.
-    
-* 2b. Activity list do not contain the keyword input by user.
-    * 2b1. Wanderlust returns an empty list.
-    
-    Use case ends.
-
-**Use case: UC23 - Find accommodation in travel plan**
-
-**MSS**
-
-1. User <ins>navigates to a specific travel plan (UC1).</ins>
-2. User requests to find accommodation according to keyword.
-3. Wanderlust returns a filtered list of accommodation that contain the keyword.
-
-    Use case ends.
-    
-**Extensions**
-
-* 2a. The input command format is invalid.
-    * 2a1. Wanderlust shows an error message.
-    
-* 2b. Accommodation list do not contain the keyword input by user.
-    * 2b1. Wanderlust returns an empty list.
-    
-    Use case ends.
-    
-**Use case: UC24 - Find friend in travel plan**
-
-**MSS**
-
-1. User <ins>navigates to a specific travel plan (UC1).</ins>
-2. User requests to find friends according to keyword.
-3. Wanderlust returns a filtered list of friends that contain the keyword.
-
-    Use case ends.
-    
-**Extensions**
-
-* 2a. The input command format is invalid.
-    * 2a1. Wanderlust shows an error message.
-    
-* 2b. friend list do not contain the keyword input by user.
-    * 2b1. Wanderlust returns an empty list.
-    
-    Use case ends.
-    
-**Use case: UC25 - Move activity from wishlist to travel plan**
-
-**MSS**
-
-1. User is at wishlist directory.
-2. User requests to move an activity from wishlist to his desired travel plan.
-3. Wanderlust transfers the activity to the desired travel plan, deleting the specific activity from the wishlist.
-
-    Use case ends.
-    
-**Extensions**
-
-* 1a. User is at a travel plan.
-    * 1a1. Wanderlust shows an error message when user request to move an activity in a travel plan.
-
-* 2a. The input command format is invalid.
-    * 2a1. Wanderlust shows an error message.
-    
-    Use case ends.
-
-**Use case: UC26 - Copy activity from wishlist to travel plan**
-
-**MSS**
-
-1. User is at wishlist directory.
-2. User requests to copy an activity from wishlist to his desired travel plan.
-3. Wanderlust copies the activity to the desired travel plan.
-
-    Use case ends.
-    
-**Extensions**
-
-* 1a. User is at a travel plan.
-    * 1a1. Wanderlust shows an error message when user request to copy an activity in a travel plan.
-
-* 2a. The input command format is invalid.
-    * 2a1. Wanderlust shows an error message.
-    
-    Use case ends.
-    
-**Use case: UC27 - Help**
-
-**MSS**
-
-1. User requests for help to input specific commands.
-2. Wanderlust shows a pop-up window, containing a link to Wanderlust's user guide for help.
-
-    Use case ends.
-    
-**Use case: UC28 - Exit**
-
-**MSS**
-
-1. User requests to exit Wanderlust.
-2. Wanderlust shuts down.
-
-    Use case ends.
-    
-    
 ### Non-Functional Requirements
 
 1.  Should work on any mainstream OS_ as long as it has Java `11` or above installed.
-2.  The travel planner should be able to hold up to 1000 travel plans without a noticeable sluggishness in performance for typical usage.
+2.  The travel planner should be able to hold up to 1000 activities without a noticeable sluggishness in performance for typical usage.
 3.  Should be able to respond to user commands within 1 second.
 4.  A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
 5.  Should be a single-user product.
@@ -1338,54 +1164,4 @@ testers are expected to do more *exploratory* testing.
        
        
 ## *Appendix: Effort*
-
-### Model
-The `Model` of _wanderlust_ is much more complex than AB3. In AB3, the model is only in charge of the Person class, which takes in simple attributes 
-relating to Person objects.
-
-In _wanderlust_, each travel plan handles a total of 3 different objects, namely, Activity, Accommodation and Friend. Furthermore,
-_wanderlust_ also have an exclusive wishlist that keep track of Activity objects. Essentially, it is similar to one large model
-handling 3 x AB3. Complex attributes such as `Cost` is also implemented so that _wanderlust_ can calculate the total cost of the `travelplan`.
-Furthermore, the attributes of the different classes have to interact with one another to ensure that they are cohesive.
-For instance, we have to make sure any `activty`/`accommodation` date is within the range of the `travelplan`'s date. The logic behind can be
-implemented in many ways and we went through a variety of approaches to simplify the logic. 
-
-Lastly, the `Model` of _wanderlust_ support higher level features and commands such as sorting, moving and navigating to 
-different directories that were not present in AB3.
-
-### Logic
-The complexity of `Logic` was more advanced than AB3. _wanderlust_'s `Logic` supports
-many more commands compared to AB3, such as `sort`, `goto`, `copy`, `move`, `show` commands. Existing commands from AB3 were also
-enhanced to handle the complex `Model` of _wanderlust_.
-
-There was significant effort placed in creating the logic for _wanderlust. The `Logic` of _wanderlust is responsible for 
-at least 3x the `Logic` of AB3. It has to account for the logic of `travelplan`, `wishlist`, `activity`, `accommodation` and `friend` whilst 
-AB3 handles `Person`. Furthermore, additional logic was implemented to account for the navigation of directories and travel plans.
-For example, `ObservableDirectory` class was created to keep track of what `travelplan` the user is currently on so that the `Ui` will be 
-able to display the correct `travelplan` or `wishlist`.
-
-Additional efforts were also put into validating user input and ensuring that _wanderlust_'s parser can handle unexpected input smoothly.
-
-### Storage
-The `Storage` was extended to store more classes of _wanderlust_. `activity`, `accommodation`, and `friend` objects have to be organised and
-stored in a `travelplan`, and all these data will be placed in a JSON file in an organised manner. Essentially, the JSON file will contain 
-data of various `travelplan`s and a `wishlist`, and each `travelplan` will contain more data regarding `activity`, `accommodation`, and `friend`, 
-with each `travelplan` object storing its own attributes as well.
-
-Furthermore, complex attributes such as `wanderlustdate` and `wanderlustdatetime` have to be stored in the JSON file in an approriate format.
-Significant time and effort were put into discussing and planning the best way to represent each new attribute in the JSON file.
-
-### Ui
-The `Ui` component took us the most amount of time. We have to redesign the entire AB3 Ui to fit _wanderlust_ desigin. 
-Alot of effort was placed in planning the structure of the `Ui` so that our user interface will be user-friendly and appealing.
-Furthermore, additional logic of navigating between travel plans and switching between the activity/accommodation/friend tabs was implemented 
-so that users can use the application smoothly. We also spent a considerable amount of time in studying javafxml so that we are able to implement an 
-entirely new UI with icons and navigation options, making it a more intractive experience for the users as compared to the single page view of AB3's Ui.
-
-### Overall
-All in all, this project was a challenging one for the _wanderlust_ team. We started off with many ideas and features that were seemed
-very appealing. However, we eventually decided that they were not suitable due to time constraints. In the first iteration, time and effort were placed
-in brainstorming and coming up with a concrete and feasible product. Throughout the weeks, we made consistent efforts to study the source code, modify existing features and
-create new features for _wanderlust_. There were high standards placed amongst us in ensuring that all of us put in time and effort in building _wanderlust).
-Rigorous testing, trial and error were fundamental in the process so that we can deliver _wanderlust_ within the timeline. Whilst _wanderlust_ may not be
-the perfect travel planner application, this journey was a memorable one filled with teamwork and perseverance, and we are all pround of the end product.
+//TODO:
